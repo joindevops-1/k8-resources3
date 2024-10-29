@@ -12,7 +12,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-00adfc3c20b9ba5c8
+    volumeHandle: "fs-00adfc3c20b9ba5c8:fsap-0dbf3616c89792f36"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -25,7 +25,7 @@ spec:
   volumeName: efs-static
   resources:
     requests:
-      storage: 5Gi
+      storage: 4Gi
 ---
 apiVersion: v1
 kind: Pod
